@@ -1,0 +1,489 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --cream: #f8f6f0;
+    --white: #ffffff;
+    --green: #244d3b;
+    --green-light: #e6eee7;
+    --orange: #c66a45;
+    --text: #26372e;
+    --muted: #7d867f;
+    --line: #e8e6df;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'DM Sans', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.topbar {
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.brand-icon {
+    font-size: 29px;
+    color: var(--orange);
+}
+
+.brand-dot {
+    color: var(--orange);
+}
+
+.top-label,
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.top-label {
+    color: var(--muted);
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+.hero {
+    min-height: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0;
+}
+
+.eyebrow {
+    color: var(--orange);
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-text {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.hero-stamp {
+    width: 142px;
+    height: 142px;
+    border: 1px solid #d9c8b5;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(8deg);
+    flex-shrink: 0;
+}
+
+.hero-stamp span {
+    color: var(--orange);
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.hero-stamp p {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 65px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.stat-card h2 {
+    margin: 8px 0 3px;
+    color: var(--green);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.inventory-section,
+.add-section {
+    margin-bottom: 55px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 31px;
+    font-weight: 600;
+}
+
+.live-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.live-label span {
+    width: 8px;
+    height: 8px;
+    background: #5b9d6c;
+    border-radius: 50%;
+}
+
+.toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--text);
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px #244d3b12;
+}
+
+.toolbar input {
+    flex: 1;
+}
+
+.toolbar select {
+    width: 200px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead {
+    background: #f2f1eb;
+}
+
+th {
+    padding: 15px 18px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 17px 18px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+}
+
+.product-name {
+    font-weight: 700;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 4px;
+    background: #f2eee6;
+    color: #806746;
+    font-size: 11px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-in {
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.status-low {
+    background: #fff0df;
+    color: #9c5d1c;
+}
+
+.status-out {
+    background: #fbe8e5;
+    color: #a34437;
+}
+
+.delete-button {
+    border: 1px solid #ecd4cf;
+    border-radius: 4px;
+    padding: 6px 10px;
+    background: white;
+    color: #a34437;
+    cursor: pointer;
+    font: inherit;
+    font-size: 11px;
+}
+
+.delete-button:hover {
+    background: #fbe8e5;
+}
+
+.empty-message {
+    display: none;
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.table-note {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-align: right;
+}
+
+.add-section {
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.add-symbol {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--green-light);
+    color: var(--green);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-grid label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-grid input,
+.form-grid select {
+    display: block;
+    margin-top: 8px;
+}
+
+.add-button {
+    margin-top: 23px;
+    padding: 13px 20px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.add-button span {
+    margin-left: 18px;
+}
+
+.add-button:hover {
+    background: #183728;
+    transform: translateY(-2px);
+}
+
+.form-message {
+    min-height: 22px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--green);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 24px 0;
+    border-top: 1px solid #dedbd2;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        padding: 0 5%;
+    }
+
+    .top-label {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .hero-stamp {
+        width: 90px;
+        height: 90px;
+    }
+
+    .hero-stamp span {
+        font-size: 23px;
+    }
+
+    .hero-stamp p {
+        font-size: 7px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 45px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-card h2 {
+        font-size: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar select {
+        width: 100%;
+    }
+
+    .add-section {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-stamp {
+        display: none;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+}
