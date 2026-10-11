@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockBloom | Inventory Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dist/app.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="brand-icon">✳</span>
+            <span>stockbloom<span class="brand-dot">.</span></span>
+        </a>
+        <span class="top-label">INVENTORY STUDIO</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">YOUR STORE, IN GOOD ORDER</p>
+                <h1>Small details.<br><span>Big picture.</span></h1>
+                <p class="hero-text">
+                    A calmer way to keep track of the things you sell.
+                </p>
+            </div>
+            <div class="hero-stamp">
+                <span>✳</span>
+                <p>MADE FOR<br>BETTER STOCK</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <p>TOTAL PRODUCTS</p>
+                <h2 id="product-count">0</h2>
+                <span>Items in your catalogue</span>
+            </article>
+            <article class="stat-card">
+                <p>UNITS IN STOCK</p>
+                <h2 id="unit-count">0</h2>
+                <span>Across all products</span>
+            </article>
+            <article class="stat-card">
+                <p>INVENTORY VALUE</p>
+                <h2 id="inventory-value">₹0</h2>
+                <span>Based on price × quantity</span>
+            </article>
+        </section>
+
+        <section class="inventory-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+                    <h2>Your inventory</h2>
+                </div>
+                <span class="live-label"><span></span> LIVE OVERVIEW</span>
+            </div>
+
+            <div class="toolbar">
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                >
+                <select id="category-filter" aria-label="Filter by category">
+                    <option value="All">All categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Stationery">Stationery</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Home">Home</option>
+                </select>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PRODUCT</th>
+                            <th>CATEGORY</th>
+                            <th>PRICE</th>
+                            <th>QUANTITY</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list"></tbody>
+                </table>
+                <p id="empty-message" class="empty-message">
+                    No products found. Try another search.
+                </p>
+            </div>
+            <p class="table-note">A LITTLE ORGANISATION GOES A LONG WAY.</p>
+        </section>
+
+        <section class="add-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">GROW YOUR COLLECTION</p>
+                    <h2>Add a product</h2>
+                </div>
+                <span class="add-symbol">＋</span>
+            </div>
+
+            <form id="product-form">
+                <div class="form-grid">
+                    <label>
+                        Product name
+                        <input id="product-name" type="text"
+                            placeholder="e.g. Desk Lamp" required>
+                    </label>
+                    <label>
+                        Category
+                        <select id="product-category" required>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="Home">Home</option>
+                        </select>
+                    </label>
+                    <label>
+                        Price (₹)
+                        <input id="product-price" type="number"
+                            min="0.01" step="0.01"
+                            placeholder="499" required>
+                    </label>
+                    <label>
+                        Quantity
+                        <input id="product-quantity" type="number"
+                            min="0" step="1"
+                            placeholder="10" required>
+                    </label>
+                </div>
+                <button type="submit" class="add-button">
+                    Add to inventory <span>↗</span>
+                </button>
+                <p id="form-message" class="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <footer>
+            <span>✳ STOCKBLOOM</span>
+            <span>TRACK TODAY. GROW TOMORROW.</span>
+        </footer>
+    </main>
+</body>
+</html>
